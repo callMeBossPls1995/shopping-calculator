@@ -1,0 +1,196 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.title {
+  font-size: 3.6rem;
+}
+
+label {
+  font-size: 1.8rem;
+}
+
+input[type="text"],
+input[type="number"] {
+  border: none;
+  border-bottom: 1px solid #333;
+  outline: none;
+  padding: 0.5em 0.3em;
+  font-size: 1.5rem;
+  min-width: 250px;
+}
+
+button {
+  padding: 0.6em 0.8em;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background: #333;
+  color: #fff;
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+ul {
+  list-style-type: square;
+}
+
+li {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 0.7rem;
+}
+
+.del-button {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: red;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.del-button:hover {
+  opacity: 0.2;
+}
+
+.del-button:active {
+  opacity: 1;
+  transform: translateY(2px);
+}
+
+.del-button:before,
+.del-button:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  transform: translateY(-1px) rotate(45deg);
+  transform-origin: center;
+}
+
+.del-button:before {
+  top: 50%;
+  transform: translateY(-1px) rotate(-45deg);
+}
+
+.container {
+  padding: 1rem;
+}
+
+.container > div {
+  margin-bottom: 2rem;
+}
+
+form {
+  display: inline-block;
+  padding: 1rem 0;
+  border-bottom: 2px dotted #333;
+}
+
+form > div {
+  margin-bottom: 1rem;
+}
+
+form > div:last-child {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: space-between;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.list-action {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 180px;
+}
+
+#result {
+  overflow: hidden;
+  width: 0;
+  transition: width 0.3s;
+}
+
+#result.active {
+  width: auto;
+}
+
+#result > * {
+  transform: translateX(-100%);
+  transition: all 0.6s 0.6s;
+}
+
+#result.active > * {
+  transform: translateX(0%);
+}
+
+#item-list {
+  display: inline-block;
+  padding-bottom: 2rem;
+  border-bottom: 1px #333 dotted;
+  list-style: circle;
+  margin-left: 2rem;
+}
+
+#item-list li {
+  max-width: 60%;
+  width: 50%;
+  min-width: 310px;
+  padding: 0.6rem 0rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#item-list li > span:nth-child(2) {
+  margin: 0 2rem;
+}
+
+#item-list li > span:last-child {
+  position: absolute;
+  right: 0;
+  margin: 0 1rem;
+}
+
+#item-list > li > span:first-child {
+  width: 150px;
+  white-space: wrap;
+  padding: 0.9rem 0;
+}
+
+#result-detail {
+  padding: 1rem 0;
+  margin-top: 1rem;
+}
+
+#result-detail label {
+  display: inline-block;
+  width: 150px;
+}
+
+#result-detail span {
+  font-size: 2rem;
+  font-weight: bold;
+}

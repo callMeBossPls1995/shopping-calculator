@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- link -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Shopping Calculator</title>
+  </head>
+  <body>
+    ​
+    <div class="container">
+      <div>
+        <h2 class="title">Shopping Calculator</h2>
+      </div>
+
+      <!--  add item into list  -->
+      <div>
+        <form>
+          <div>
+            <label for="item-name">Item name</label>
+            <input
+              type="text"
+              name="item-name"
+              id="item-name"
+              placeholder="Enter Item Name"
+            />
+          </div>
+          <div>
+            <label for="item-price">Item price</label>
+            <input
+              type="number"
+              min="0.01"
+              name="item-price"
+              id="item-price"
+              placeholder="Enter Item Price (min = 0.01)"
+            />
+          </div>
+          <div>
+            <label for="item-price">Item Quantity</label>
+            <input
+              type="number"
+              min="1"
+              name="item-quantity"
+              id="item-quantity"
+              placeholder="Enter Number of Item (min = 1)"
+            />
+          </div>
+          <div>
+            <button id="clear">Clear</button>
+            <button id="add-item">Add to list</button>
+          </div>
+        </form>
+      </div>
+      <div class="list-action">
+        <button id="show-list">Show List</button>
+        <span id="item-count">Item Count: 0</span>
+      </div>
+      <div id="result">
+        <h3 class="title">Result</h3>
+        <ul id="item-list"></ul>
+        <!--   display calculation details     -->
+        <div id="result-detail">
+          <div>
+            <label for="">Sub Total</label>
+            <input type="text" name="subtotal" id="subtotal" disabled />
+            <span>$</span>
+          </div>
+          <div>
+            <label for="">Tax Percentage</label>
+            <input type="number" id="tax-percentage" min="0.01" value="6" />
+            <span>%</span>
+          </div>
+          <div>
+            <label for="">Tax Total</label>
+            <input type="number" name="tax-total" id="tax-total" disabled />
+            <span>$</span>
+          </div>
+          <div>
+            <label for="">Total</label>
+            <input type="number" name="total" id="total" disabled />
+            <span>$</span>
+          </div>
+        </div>
+        <!--   subTotal   -->
+        <!--   tax percentage   -->
+        <!--   Total   -->
+        <!--     clear -->
+      </div>
+      <!--  show list and total  -->
+    </div>
+
+    <!-- 
+      
+       . making a web-app that calculate total price after tax
+       . users can add item and modify name of that item include price for it
+       . then user can calculate total then print out result
+      
+      
+      
+      -->
+
+    <script src="app.js"></script>
+  </body>
+</html>
